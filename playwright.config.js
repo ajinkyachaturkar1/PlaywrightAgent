@@ -25,7 +25,7 @@ const config = ({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
  use: {
     browserName: 'chromium',
-    headless: false,
+    headless: true,
     actionTimeout: 10 * 1000,
     navigationTimeout: 30 * 1000,
     screenshot : 'on',
