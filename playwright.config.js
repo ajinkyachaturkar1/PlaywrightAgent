@@ -21,7 +21,15 @@ const config = ({
   expect: {
     timeout: 40 * 1000,
   },
-  reporter: 'html',
+  reporter: [
+    ['html', {
+        outputFolder: 'playwright-report',
+        open: 'never'
+    }],
+    ['allure-playwright', {
+        resultsDir: 'allure-results'
+    }]
+],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
  use: {
     browserName: 'chromium',
